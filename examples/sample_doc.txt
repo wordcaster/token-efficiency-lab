@@ -1,0 +1,9 @@
+This document describes a fictional product called Aurora Notes, a lightweight knowledge management tool designed for individuals and small teams.
+
+Aurora Notes allows users to create, edit, and organize notes using simple markdown formatting. Notes can be grouped into collections and tagged for easier discovery. The system prioritizes speed and clarity over complex configuration options.
+
+Users can search across all notes using keywords or filters. Search results are ranked based on relevance and recent activity. The product does not attempt to infer intent beyond basic matching to avoid unexpected results.
+
+Aurora Notes is designed to work offline first, synchronizing changes when a network connection becomes available. Conflicts are resolved by presenting differences to the user rather than merging automatically.
+
+The product is intended for writers, researchers, and professionals who want a distraction-free environment for capturing and reviewing information.
