@@ -1,30 +1,26 @@
 # Token Efficiency Lab
 
-Hands-on experiments + small Python tools for measuring, budgeting, compressing, and retrieving context for LLM prompts.
+A practical, experiment-driven exploration of token-efficient context building for LLM systems.
 
-## What this repo is
-This is a learning + portfolio repo focused on practical token/cost efficiency:
-- token counting and budgeting
-- prompt compression strategies
-- chunking + retrieval-lite (send only what matters)
-- simple evaluation notes (quality vs cost)
+## Why this exists
 
-## Repo structure
-- `src/` — scripts and utilities
-- `examples/` — sample inputs/outputs and demo reports
-- `experiments/` — experiment logs with before/after token counts
-- `docs/` — notes and playbooks
+LLM applications often fail due to excess context, ignored budgets, or unpredictable costs.
 
-## Current status
-v0.1 (in progress): repo scaffolding + first token counting experiment next.
+This repo demonstrates guardrails-first, explainable context pipelines.
 
-## Principles
-- Measure first (tokens in/out), then optimize.
-- Prefer structure over verbosity.
-- Treat quality and cost as a trade-off to manage, not a guess.
+## Pipeline
 
-## Next milestones
-- [ ] Token counter script + baseline log
-- [ ] Budget guardrails script
-- [ ] Compression experiments
-- [ ] Chunking + retrieval-lite demo
+Document -> Token Count -> Budget -> Chunking -> Retrieval-lite -> Context
+
+## How to run
+
+.venv\Scripts\python src\context_builder.py --file examples\sample_doc.txt --query "offline sync conflicts resolve" --max 120
+
+## Experiments
+
+Exp001–Exp007 documented in /experiments
+
+## Status
+
+Actively evolving
+
