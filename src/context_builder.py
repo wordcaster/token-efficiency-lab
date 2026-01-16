@@ -17,11 +17,23 @@ from pathlib import Path
 
 import tiktoken
 
+SYNONYMS = {
+    "sync": {"synchronize", "synchronizing", "synchronization"},
+    "synchronize": {"sync", "synchronizing", "synchronization"},
+    "resolve": {"resolved", "resolving", "resolution"},
+    "conflict": {"conflicts"},
+    "offline": {"disconnected"},
+}
+
 WORD_RE = re.compile(r"[a-zA-Z0-9]+")
 
 
 def tokenize_words(s: str) -> set[str]:
-    return {w.lower() for w in WORD_RE.findall(s)}
+    base = {w.lower() for w in WORD_RE.findall(s)}
+    expanded = set(base)
+    for w in base:
+        expanded |= SYNONYMS.get(w, set())
+    return expanded
 
 
 def count_tokens(text: str, encoding_name: str) -> int:
