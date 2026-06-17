@@ -27,8 +27,3 @@ Document -> Token Count -> Budget -> Chunking -> Retrieval-lite -> Context
 ## Experiments
 
 Exp001–Exp007 documented in /experiments
-
-## Status
-
-Actively evolving
-
