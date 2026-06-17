@@ -1,5 +1,13 @@
 # Token Efficiency Lab
 
+## Status: superseded, with the useful parts moving on
+
+This started as a lab for measuring, budgeting, and compressing the context going into LLM prompts. The literal tooling here has largely been overtaken by the field: prompt caching now does most of what manual compression promised, tokenizers are free and built in, and the conversation has shifted from counting tokens to context engineering and retrieval quality.
+
+What held up is the thinking underneath: budget what goes into context, retrieve instead of dumping, and structure content so it survives chunking. Those ideas are being carried forward into retrieval-ready documentation work, where the same discipline improves both retrieval accuracy and token cost. See CONCEPTS.md for the distilled, still-useful ideas.
+
+Kept public as a record of the exploration. Not actively maintained as a tool.
+
 A practical, experiment-driven exploration of token-efficient context building for LLM systems.
 
 ## Why this exists
